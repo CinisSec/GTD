@@ -13,19 +13,24 @@ c = conn.cursor()
 # create tables
 c.execute('''CREATE TABLE if not exists captures (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    idea TEXT not null)''')
+    idea TEXT not null,
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    archived INTEGER default 0)''')
 
 conn.commit()
 conn.close()
 
-
 def main():
-    if len(sys.argv) == 0:
-        print("Usage: gtd.py -c <idea> | -cl | -cd <id>")
+    if len(sys.argv) < 2:
+        print("Usage: gtd.py -c <idea> | -cl | -cla | -ca <id> | -cd <id>")
     elif sys.argv[1] == "-c":
         capture.capture(sys.argv[2])
     elif sys.argv[1] == "-cl":
         capture.print_captures()
+    elif sys.argv[1] == "-cla":
+        capture.print_captures_active()
+    elif sys.argv[1] == "-ca":
+        capture.archive_capture(sys.argv[2])
     elif sys.argv[1] == "-cd":
         capture.delete_capture(sys.argv[2])
 
