@@ -37,7 +37,7 @@ def delete_capture(id):
         c.execute('DELETE FROM captures WHERE id = ?', (id,))
     conn.commit()
     conn.close()
-    print("Capture '{}' removed".format(id))
+    print("Capture '{}' deleted".format(id))
 
 def archive_capture(id):
     conn = sqlite3.connect('gtd.db')
