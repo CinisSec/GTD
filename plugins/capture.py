@@ -14,9 +14,9 @@ def print_captures():
     c.execute('SELECT id,idea,created,archived FROM captures')
     for capture in c:
         if capture[3] == 0:
-            printable_archive_status = "Active"
+            printable_archive_status = "ACTIVE"
         else:
-            printable_archive_status = "Archived"
+            printable_archive_status = "ARCHIVED"
         print(capture[0], capture[1], capture[2], printable_archive_status)
     conn.close()
 
