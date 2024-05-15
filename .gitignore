@@ -1,0 +1,6 @@
+pit.py
+.DS_Store
+plugins/__pycache__/capture.cpython-310.pyc
+plugins/__pycache__/organize.cpython-310.pyc
+plugins/__pycache__/review.cpython-310.pyc
+gtd.db
