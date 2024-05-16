@@ -63,14 +63,16 @@ COMMANDS = {
     ### task marking
     "-tmc": (omark.mark_task_complete, 2), # id
     "-tmi": (omark.mark_task_incomplete, 2), # id
-    #"-tmar": (omark.mark_tasks_archive, 2), # id
+    # TODO"-tmar": (omark.mark_tasks_archive, 2), # id
     #### Task range marking
+    # TODO: Implement task range marking commands
     #"-tmcr": (omark.mark_task_complete_range, 2), # start_id, end_id
     #"-tmir": (omark.mark_task_incomplete_range, 2), # start_id, end_id
     #"-tmar": (omark.mark_tasks_archive_range, 2), # start_id, end_id
     ### task deletion
     "-td": (organize.delete_task, 2), # id
-    #"-tdr": (organize.delete_task_range, 2), # start_id, end_id
+    #
+    # TODO:"-tdr": (organize.delete_task_range, 2), # start_id, end_id
     ### task printing
     "-tdw": (oprint.print_tasks_due_this_week, 0),
     "-tdm": (oprint.print_tasks_due_this_month, 0),
