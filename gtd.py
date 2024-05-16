@@ -71,8 +71,7 @@ COMMANDS = {
     #"-tmar": (omark.mark_tasks_archive_range, 2), # start_id, end_id
     ### task deletion
     "-td": (organize.delete_task, 2), # id
-    #
-    # TODO:"-tdr": (organize.delete_task_range, 2), # start_id, end_id
+    # TODO "-tdr": (organize.delete_task_range, 2), # start_id, end_id
     ### task printing
     "-tdw": (oprint.print_tasks_due_this_week, 0),
     "-tdm": (oprint.print_tasks_due_this_month, 0),
@@ -80,6 +79,10 @@ COMMANDS = {
     "-tla": (oprint.print_tasks_active, 0),
     "-tlc": (oprint.print_tasks_completed, 0),
     "-tld": (oprint.print_dependent_tasks, 0),
+    ## review
+    # TODO "-r": (rprint.new_review, 2),
+    # TODO "-rd": (rprint.delete_review, 2),
+    # TODO "-rl": (rprint.print_reviews, 0),
 }
 
 

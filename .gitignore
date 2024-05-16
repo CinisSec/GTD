@@ -1,5 +1,5 @@
 pit.py
 .DS_Store
-*/__pycache__/
+__pycache__/
 plugins/organize/__pycache__/
 gtd.db
